@@ -14,7 +14,7 @@ $(document).ready(function() {
 window.addEventListener('scroll', function() {
 	var nav = document.querySelector('.navigation');
 	var scrolledDistance = window.scrollY || window.pageYOffset;
-	var oneRem = 200;			  
+	var oneRem = 500;			  
 	if (scrolledDistance > oneRem) {
 	nav.classList.add('fixed');
 	} else {

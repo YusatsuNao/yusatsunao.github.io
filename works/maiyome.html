@@ -21,7 +21,7 @@
 		<meta property="og:site_name" content="MaiYome - The Local Based Booru">
 		<meta property="og:locale" content="en_US">
 	<!-- Front Page script & css-->
-		<link rel="stylesheet" href="css/server.css">
+		<link rel="stylesheet" href="../css/server.css">
 		<link rel="stylesheet" href="css/ui-maiyome.css">
 	</head>
 	<body>
@@ -31,9 +31,10 @@
 				<div class="nav_list">
 					<div class="nav item"><a href="#about">About</a></div>
 					<div class="nav item"><a href="#features">Features</a></div>
-					<div class="nav item"><a href="#usage">How To Use</a></div>
-					<div class="nav item"><a href="#developers">Development</a></div> <!-- shows how to do it in developen -->
-					<div class="nav item"><a href="#changelog">Changelog</a></div> <!-- only shows latest changelog -->
+					<div class="nav item"><a href="#usage">Usage</a></div>
+					<div class="nav item"><a href="#developers">Development</a></div>
+					<div class="nav item"><a href="#changelog">Changelog</a></div>
+					<div class="nav item"><a href="../index.html">Yusatsu Nao</a></div>
 				</div>
 				<div class="nav_download">
 					<div class="nav download">DOWNLOAD</div>
@@ -41,39 +42,56 @@
 			</div>
 		</nav>
 		<header id="top" class="maiyome">
-			<div class="info_top">A Local Based Booru for Your Waifu Collection</div>
-			<div class="info_mid">Easy, booru-like tagging system for a data hoarder like you, that loves collecting anime pictures</div>
-			<div class="info_bottom">
-				<div class="info_sub download">
-					DOWNLOAD
-				</div>
-			</div>
-		</header>
-		<section id="homepage" class="maiyome">
-			<div id="about" class="main-content about">
-				<div class="about head">What is MaiYome</div>
-				<div class="about main">
-					<h1>MaiYome is a <b>"JUST A LOCAL BASED BOORU GALLERY DESKTOP APPLICATION".</b></h1>
-					<span>So, basically it's a DAM or Digital Asset Management-like app to manage all of your waifu images collection which focuses on Tag Management just like a booru style site but it's locally saved. The UI is very simple, a filter tag, and tag editor to remove or add to your image, also an exporter directly to the image file ( which will change the MD5 ) or just export to .json file.</span>
-				</div>
-			</div>
-			<div id="features" class="main-content features">
-				<div class="feature content">
-					<div class="content image"></div>
-					<div class="content list">
-						<div class="data">Booru Tagging System</div>
-						<div class="data">Custom Tagging Presets</div>
-						<div class="data">Easy Import</div>
-						<div class="data">Multiple Viewer Types</div>
-						<div class="data">Built-in Image Viewer</div>
-						<div class="data">Image Comparator</div>
-						<div class="data">Image Fingerprinting</div>
-						<div class="data">Duplicate Finder</div>
-						<div class="data">Database Switcher</div>
-						<div class="data">Import / Export</div>
+			<div id="info_main">
+				<div class="info_top">A Local Based Booru for Your Waifu Collection</div>
+				<div class="info_mid">Easy, booru-like tagging system for a data hoarder like you, that loves collecting anime pictures</div>
+				<div class="info_bottom">
+					<div class="info_sub download">
+						<span>DOWNLOAD</span>
 					</div>
 				</div>
 			</div>
+			<div id="insert">
+				<div class="image_insert"></div>
+			</div>
+			<div class="header mesh"></div>
+		</header>
+		<section id="homepage" class="maiyome">
+			<div class="homepage mesh"></div>
+			<div id="about" class="main-content about">
+				<div class="about left">
+					<div class="about image"></div>
+				</div>
+				<div class="about right">
+					<div class="about head">What is MaiYome?</div>
+					<div class="about main">
+						<h1><span class="h1 text">MaiYome</span> is <b>"JUST A LOCAL BASED BOORU GALLERY DESKTOP APPLICATION".</b></h1>
+						<br/>
+						<div>Mai is the japanization of the word "My" in english and "Yome" means wife in Japanese, and then combining it become "MaiYome", or something like MaiWaifu / My Waifu</div>
+						<br/>
+						<div>So, basically it's a DAM or Digital Asset Management-like software to manage all of your waifu images collection which focuses on Tag Management just like a booru site but it's locally saved. The UI is very simple, a filter tag, and tag editor to remove or add to your image, also an exporter directly to the image file ( which will change the MD5 ) or just export to .json file.</div>
+					</div>
+				</div>
+			</div>
+				<div id="features" class="main-content features">
+					<div class="feature content">
+						<div class="content image">
+							<div class="feature image"></div>
+						</div>
+						<div class="content list">
+							<div class="data active" data-img="../resources/image/maiyome_ft1.png">Booru Tagging System</div>
+							<div class="data" data-img="../resources/image/maiyome_ft2.png">Custom Tagging Presets</div>
+							<div class="data" data-img="../resources/image/maiyome_ft3.png">Easy Import</div>
+							<div class="data" data-img="../resources/image/maiyome_ft4.png">Multiple Viewer Types</div>
+							<div class="data" data-img="../resources/image/maiyome_ft5.png">Built-in Image Viewer</div>
+							<div class="data" data-img="../resources/image/maiyome_ft6.png">Image Comparator</div>
+							<div class="data" data-img="../resources/image/maiyome_ft7.png">Image Fingerprinting</div>
+							<div class="data" data-img="../resources/image/maiyome_ft8.png">Duplicate Finder</div>
+							<div class="data" data-img="../resources/image/maiyome_ft9.png">Database Switcher</div>
+							<div class="data" data-img="../resources/image/maiyome_ft10.png">Import / Export</div>
+						</div>
+					</div>
+				</div>
 			<div id="usage" class="main-content usage">
 				<div class="usage head">How to Use?</div>
 				<div class="usage main">
@@ -92,31 +110,38 @@
 				</div>
 			</div>
 			<div id="developers" class="main-content developers">
-				<div class="developer head">Want to Customize it?</div>
-				<div class="developer main">
-					<div class="developers details">
-						If you want to build it or add feature by yourself, you can fork it!
-					</div>
-					<div class="developers code">
-						<code class="maiyome code install">
-							git clone https://github.com/YusatsuNao/MaiYome.git<br/>cd MaiYome
-						</code>
-						<code>
-							YOU NEED TO USE : better-sqlite3 @11.9.1
-						</code>
-					</div>
-					<div class="developers direct">
-						For more info check the <a href="https://github.com/YusatsuNao/MaiYome">Github Repository<i class="links"></i></a>
+				<div class="developers top">
+					<div class="developers head">Custom Development ?</div>
+					<div class="developers main">
+						<!-- <div class="developers details"></div> -->
+						<div class="developers code">
+							<code class="maiyome code install">
+								<span>git clone https://github.com/YusatsuNao/MaiYome.git</span><br/>
+								<span>cd "MaiYome/src"</span><br/>
+								<span>npm install</span><br/>
+								<span>npm run start</span>
+							</code>
+							<code>
+								⚠️ YOU NEED TO USE : <b>better-sqlite3 @11.9.1</b><br/>
+								⚠️ Put "ExifTool.exe" and all its necessary dependency into <span>module/exiftool/exiftool.exe</span>
+							</code>
+						</div>
+						<div class="developers direct">
+							If you want to build it or add another feature by yourself, you can fork it!<br/>
+							For more info check the <a href="https://github.com/YusatsuNao/MaiYome">Github Repository ►<i class="links"></i></a>
+						</div>
 					</div>
 				</div>
 			</div>
 			<div id="changelog" class="main-content changelog">
-				<div class="changelog head">Latest Changelog</div>
-				<div class="changelog main">
-					<code>
-						version 1.0.0<br/>
-						- MaiYome Public Release
-					</code>
+				<div class="changelog top">
+					<div class="changelog head">Latest Changelog</div>
+					<div class="changelog main">
+						<code>
+							<span>Version 1.0</span><br/>
+							<span>　- MaiYome Public Release</span>
+						</code>
+					</div>
 				</div>
 			</div>
 			<div id="notes" class="main-content notes">
@@ -128,5 +153,49 @@
 			<div class="credit">Copyright &#169; 2015 - <script>document.write(new Date().getFullYear());</script> Yusatsu Nao</div>
 		</div>	
 		<!-- Afterload script & css	-->
+		<script src="../js/jquery.min.js"></script>
+		<script>
+			const tabs = document.querySelectorAll('.data');
+			const imageBox = document.querySelector('.feature.image');
+
+			let currentIndex = 0;
+			let interval;
+
+			function setActive(index) {
+				tabs.forEach(t => t.classList.remove('active'));
+
+				const tab = tabs[index];
+				tab.classList.add('active');
+
+				imageBox.style.backgroundImage = `url('${tab.dataset.img}')`;
+				currentIndex = index;
+			}
+
+			function startAuto() {
+				interval = setInterval(() => {
+				let nextIndex = (currentIndex + 1) % tabs.length;
+				setActive(nextIndex);
+				}, 5000);
+			}
+
+			function resetAuto(index) {
+				clearInterval(interval);
+				setActive(index);
+				startAuto();
+			}
+
+			// Init
+			if (tabs.length > 0) {
+				setActive(0);
+				startAuto();
+			}
+
+			// Click support (resets timer)
+			tabs.forEach((tab, index) => {
+				tab.addEventListener('click', () => {
+				resetAuto(index);
+				});
+			});
+		</script>
 	</body>	
 </html>	
