@@ -1,0 +1,166 @@
+/* Base CSS3 */
+/* *//* *//* */
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Lato', sans-serif;
+  font-family: 'Oswald', sans-serif; }
+a {
+	font-size: 14px;
+	font-weight: 600;
+	padding: 15px 10px 10px 10px;
+	margin: 0px;
+	font-family: "Titillium Web", sans-serif;
+	color: #fff;
+	text-decoration: none; }
+a:visited {
+	color: #fff; }
+a:active, a:hover {
+	color: #0095FF;
+	border-bottom: 4px solid #0095FF;
+		-webkit-transition: all 0.3s ease 0s;
+		-moz-transition: all 0.3s ease 0s;
+		transition: all 0.3s ease 0s; }
+
+
+
+/* HOMEPAGE  */
+/* *//* *//* */
+/* *//* *//* */
+body {
+	color: #eee;
+}
+nav {
+    width: -webkit-fill-available;
+    position: fixed;
+    height: 50px;
+    z-index: 99;
+    top: 0px;
+	background: #030712;
+	height: max-content; }
+#nav_main {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    height: 60px;
+	width: max-content;
+    margin: 0px auto;
+}
+.nav_icon {
+	background: transparent url('../../img/maiyome_logo.webp') no-repeat 50% 50% / contain;
+	width: 200px;
+    margin-right: 20px; }
+.nav_list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+	width: 50vw;
+}
+.nav.item, .nav_download {
+    min-width: 50px;
+    height: auto;
+    width: max-content;
+    margin: 0px auto;
+    margin: 20px 10px;
+}
+
+
+header {
+	background: #030712 url('../img/background/main_bg.webp') no-repeat 50% 50% / cover;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: 1; }
+
+
+
+section#main-content {
+	height: max-content;
+	padding: 10px;
+	margin: 0px auto;
+	display: flex;
+}
+section#about {
+	background: #222222;
+}
+section#features {
+	background: #222222;
+}
+section#usage {
+	background: #222222;
+}
+section#developers {
+	background: #222222;
+}
+section#changelog {
+	background: #222222;
+}
+section#notes {
+	background: #222222;
+}
+
+
+/* Media Screen Bootstrap 1280 or Below */ 
+@media only screen and (max-width: 1280px) {
+	#homepage::before {
+		content: "";
+		position: absolute;
+		top: -60px;
+		width: 100%;
+		height: 60px;
+		background: linear-gradient(to bottom, transparent, rgba(0,0,0,0.5));
+	}
+	#homepage {
+		position: relative;
+		z-index: 2;
+
+		/* THIS IS THE KEY */
+		margin-top: 100vh;
+		max-width: -webkit-fill-available;
+		height: 100vh; }
+	#header {
+		text-align: center;	}
+	.navigation {
+		text-align: center; } }
+
+
+@media only screen and (max-width: 1199px) {
+}
+
+@media only screen and (max-width: 1024px) {
+}
+
+@media only screen and (min-width: 481px) {
+	.circular-menu {
+		display: none; }
+}
+
+@media only screen and (max-width: 480px) {
+	.navigation {
+		display: none; }
+}
+
+/* Media Screen Bootstrap 1281 or Higher */
+@media only screen and (min-width: 1281px) {
+	#homepage::before {
+		content: "";
+		position: absolute;
+		top: -60px;
+		width: 100%;
+		height: 60px;
+		background: linear-gradient(to bottom, transparent, rgba(0,0,0,0.5));
+	}
+	#homepage {
+		position: relative;
+		z-index: 2;
+
+		/* THIS IS THE KEY */
+		margin-top: 100vh;
+		max-width: -webkit-fill-available;
+		height: 100vh; }
+	.header {
+		float: left; }
+}

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <!-- General meta tag -->
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="icon" type="image/png" href="media/naologo.png">
+		<link rel="canonical" href="http://yusatsunao.github.io/">
+	<!-- Front Page meta tag -->
+        <title>Redirection</title>
+        <meta name="author" content="Yusatsu Nao">
+		<meta name="copyright" content="Copyright &#169; Farise">
+	<!-- Front Page script & css-->
+        <link rel="stylesheet" href="source/css/server.css">
+        <meta http-equiv="refresh" content="2; url=Dashboard.html" />
+  	</head>
+	<body id="restricted" class="parent_404">
+        <section>
+            <div style="background: #F1A1AC;" class="element_border-top"></div>
+            <div style="text-align: center; background: #6C7594; color: #f1a1ac;" id="main-content-head">
+                HTTP STATUS CODE : 404 NOT FOUND
+            </div>
+        	<div class="main-content">
+                <div class="errorpage">
+                    <h1>404</h1>
+                    <h2>This page does not exist</h2>
+                    You will be redirected to Dashboard page in <span id="countdowntimer">2</span> seconds
+                    <script type="text/javascript">
+                        var timeleft = 2;
+                        var downloadTimer = setInterval(function(){
+                        timeleft--;
+                        document.getElementById("countdowntimer").textContent = timeleft;
+                        if(timeleft <= 0)
+                            clearInterval(downloadTimer);
+                        },1000);
+                    </script>
+                    <script>
+                        var currentPathname = window.location.pathname;
+                        document.getElementById("path").textContent = currentPathname;
+                    </script>
+                </div>
+            </div>
+        </section>
+	</body>
+</html>

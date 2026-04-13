@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+	<!-- General meta tag-->
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="icon" type="image/png" href="img/naologo.png">
+		<link rel="canonical" href="http://yusatsunao.com/">
+	<!-- Front Page meta tag -->
+		<title>Yusatsu Nao</title>
+		<meta name="author" content="Yusatsu Nao">
+		<meta name="description" content="Yusatsu Nao's official Site. Everything that I made or edited, I put it in this personal website. From windows icons, rainmeter, skins, wallpaper, youtube videos and etc.">
+		<meta name="keywords" content="Yusatsu Nao, Yusatsu, Nao, Yusatsu Nao Official Site, Fukumura Tatsuya, Anime, Rainmter, Icons, Windows, LINE, Theme, Sticker, LINE THEME, LINE Sticker, Anime Rainmeter, Anime Icons, Creator, Youtube Channel">
+		<meta name="copyright" content="Copyright &#169; Yusatsu Nao">
+		<meta name="robots" content="follow,index">
+		<meta property="og:title" content="Yusatsu Nao's Launch Page">
+		<meta property="og:type" content="Personal Website">
+		<meta property="og:description" content="Yusatsu Nao's official Site. Everything that I made or edited, I put it in this personal website. From windows icons, rainmeter, skins, wallpaper, youtube videos and etc.">
+		<meta property="og:image" content="https://yusatsunao.github.io/img/yn.png">
+		<meta property="og:url" content="https://yusatsunao.github.io/">
+		<meta property="og:site_name" content="Yusatsu Nao's Official Website">
+		<meta property="og:locale" content="en_US">
+	<!-- Front Page script & css-->
+		<link rel="stylesheet" href="css/server.css">
+		<link rel="stylesheet" href="css/ui-home.css">
+	</head>
+	<!-- Front Page Content -->
+	<body>
+		<navigation id="header">
+			<div class="header">
+				<div class="hl">
+					<img alt="Yusatsu Nao's Logo" src="img/yusatsunao.png" alt="Yusatsu Nao's Official Logo"/>
+				</div>
+			</div>
+			<nav class="navigation">
+				<ul>
+					<li><a class="pc-menu scroll-link" href="#top">TOP</a></li>
+					<li><a class="pc-menu scroll-link" href="#main-content-video">YOUTUBE</a></li>
+					<li><a class="pc-menu scroll-link" href="#main-content-home">BLOG</a></li>
+					<li><a class="pc-menu scroll-link" href="#main-content-works">WORKS</a></li>
+					<li><a class="pc-menu scroll-link" href="#profile">ABOUT</a></li>
+				</ul>
+			</nav>
+		</navigation>
+		<header id="top">
+			<!-- Menu System Mobile -->	
+			<!--
+			<div id="circularMenu" class="circular-menu">
+				<a class="floating-btn" onclick="document.getElementById('circularMenu').classList.toggle('active');">
+					<span id="menu-logo"></span>
+				</a>
+				<div class="items-wrapper">
+					<a class="item" href="#top">TOP</a>
+					<a class="item" href="#main-content-video">YOUTUBE</a>
+					<a class="item" href="#main-content-home">BLOG</a>
+					<a class="item" href="#main-content-works">WORKS</a>
+					<a class="item" href="#profile">ABOUT</a>
+				</div>
+			</div>
+			-->
+			<!-- Menu System Desktop-->
+			<div class="clock">
+				<div class="digital-clock">00 : 00 : 00</div>
+				<div class="day-cond">
+					<script>
+						var myDate = new Date(); 
+						if ( myDate.getHours() >= 00 )  
+						{ document.write("AM"); } 
+						else if ( myDate.getHours() >= 12 )  
+						{ document.write("PM"); } 
+					</script> 
+				</div>
+			</div>
+		</header>
+		<section id="homepage">
+			<div id="main-content-video">
+				<div class="video_profile_header">
+					<div class="video_profile">
+						<img class="youtube_image" src="img/thumb/profile.jpg" alt="Yusatsu Nao's Youtube Profile">
+						<a class="youtube_title" href="https://youtube.com/yusatsunao">Yusatsu Nao</a>
+						<span class="youtube_handle">@yusatsunao・2.7K subscribers・112 videos</span>
+						<span class="youtube_subs" onclick="openLink('https://www.youtube.com/@YusatsuNao?sub_confirmation=1')">Subscribe</span>
+					</div>
+					<div class="video_profile_a">
+						<h1>Latest Youtube Videos</h1>
+						<span class="youtube_check" onclick="openLink('https://www.youtube.com/@YusatsuNao/videos')">Check More Videos</span>
+					</div>
+				</div>
+				<div class="video new"></div>
+				<div class="video pop"></div>
+			</div>
+			<div id="main-content-featured">
+				<h1 class="works_title">Featured</h1>
+				<div class="works">					
+					<div onclick="openLink('works/maiyome.html')" class="works_item">
+						<img src="img/works/icon_maiyome.png" alt="MaiYome Icon"></div>
+				</div>
+
+			</div>
+			<div id="main-content-home">
+				<h1 class="blog_title">Catch up with the latest blog post</h1>
+				<div class="blog"></div>
+				<div class="see">
+					<button onclick="openLink('blog')">SEE MORE POST</button>
+				</div>
+			</div>
+			<div id="main-content-works">
+				<h1 class="works_title">Works</h1>
+				<div class="works">
+					<div onclick="openLink('works/anime-works.html')" class="works_item">
+						<img src="img/works/icon_aw.png" alt="Anime Works Icon"></div>
+					<div onclick="openLinkrel('http://deviantart.com/yusatsunao')" class="works_item">
+						<img src="img/works/icon_da.png" alt="DeviantArt Icon"></div>
+					<div onclick="openLink('works/line-works.html')" class="works_item">
+						<img src="img/works/icon_line.png" alt="LINE Works Icon"></div>
+					<div onclick="openLink('https://github.com/yusatsunao')" class="works_item">
+						<img src="img/works/icon_github.png" alt="Github Icon"></div>
+						<!--
+					<div onclick="openLink('#')" class="works_item">
+						<img src="../img/works/icon_no.png"></div>
+					<div onclick="openLink('#')" class="works_item">
+						<img src="../img/works/icon_no.png"></div>
+					<div onclick="openLink('#')" class="works_item">
+						<img src="../img/works/icon_no.png"></div>
+						-->
+				</div>
+			</div>
+			<div id="profile">
+				<div class="profile">
+					<div class="avatar">
+						<img alt="author" src="img/naologo.png" alt="Yusatsu Nao's Official Logo"/>
+		  			</div>
+	  				<div class="about">
+						<h1>Yusatsu Nao</h1>
+		  				<div class="summary">
+							Hello, and welcome to my personal site. My name is <b>Yusatsu Nao</b> or <b>Farise</b>, or just call me whatever you like.
+							<br/>
+							I'm from ASIA more precisely, SEA, yeah a SEA, you know the blue big mass of water―――.<br/>
+							Аnyway, In this website I pretty much post stuff I made/edited for all these years, whether it's a Youtube Video/Rainmeter Skins/Icons/Design etc, because I love editing stuff like Image/Program/Scripts or whatever I can edit/make and then I post it here, and Videos/Skins/Icons above is just a few of stuff I edited.<br/><br/>
+							I created this site back in 2015 and now still being updated and you can see my latest works above or check <b>SHOW MORE/SEE MORE</b> button to see more stuff. Well, this site is pretty simple because it's just a github pages, probably I'm going to change it to an official site later on, but for now just like this, in github. but anyway, if you want to follow me you can check my three social media/sites below.
+							<br/><br/><br/>
+							Also here are the links for the image/artist used in this page,<br/>
+							Pixiv ID : ぺい/ティアす-07a > <a href="https://www.pixiv.net/member.php?id=1883190" rel="nofollow">https://www.pixiv.net/member.php?id=1883190</a>
+							<br/>
+							Pixiv ID : フェイトリネ - アルファ > <a href="https://www.pixiv.net/member.php?id=952566" rel="nofollow">https://www.pixiv.net/member.php?id=952566</a>
+							<br/>
+							Pixiv ID : mocha＠ティア【そ11a】 > <a href="https://www.pixiv.net/member.php?id=648285" rel="nofollow">https://www.pixiv.net/member.php?id=648285</a>
+							<br/>
+							Pixiv ID : Ryosuke > <a href="https://www.pixiv.net/member.php?id=1148741" rel="nofollow">https://www.pixiv.net/member.php?id=1148741</a>
+							<br/>
+							Pixiv ID : mks > <a href="https://www.pixiv.net/member.php?id=750220" rel="nofollow">https://www.pixiv.net/member.php?id=750220</a>
+							<br/>
+							Pixiv ID : ゲン助 > <a href="https://www.pixiv.net/member.php?id=32008" rel="nofollow">https://www.pixiv.net/member.php?id=32008</a>
+							<br/>
+							Pixiv ID : ツジキ > <a href="https://www.pixiv.net/member.php?id=15568" rel="nofollow">https://www.pixiv.net/member.php?id=15568</a>
+		  				</div>
+	  				</div>
+				</div>
+			</div>
+			<div id="contact">
+				<div class="contact-list">				
+					<div class="contact" id="contact-twitter" onclick="openLinkrel('http://x.com/yusatsunao')"></div>
+					<div class="contact" id="creator-deviantart" onclick="openLinkrel('http://deviantart.com/yusatsunao')"></div>
+					<div class="contact" id="creator-youtube" onclick="openLinkrel('https://www.youtube.com/yusatsunao')"></div>
+				</div>
+			</div>
+		</section>
+		<!-- General Footer -->
+		<div id="footer">
+			<div class="credit">Copyright &#169; 2015 - <script>document.write(new Date().getFullYear());</script> Yusatsu Nao</div>
+		</div>
+		<!-- Afterload script & css-->
+		<script src="js/jquery.min.js"></script>
+		<script src="js/common_navigation_enable_scroll.js"></script>
+		<script src="js/common_homeclock.js"></script>
+		<script src="js/common_link.js"></script>
+		<script src="js/common_homeloader_blog.js"></script>
+		<script src="js/common_homeloader_youtube.js"></script>
+		<script src="js/common_homeloader_youtube_popular.js"></script>
+	</body>
+</html>
