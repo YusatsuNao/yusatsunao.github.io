@@ -22,7 +22,116 @@
 		<meta property="og:locale" content="en_US">
 	<!-- Front Page script & css-->
 		<link rel="stylesheet" href="../css/server.css">
-		<link rel="stylesheet" href="css/ui-maiyome.css">
+		<link rel="stylesheet" href="../resources/css/ui-maiyome.css">
+		<style>
+			button.btn_dlbottom, button.btn_dltop {
+				position: relative;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				border-radius: 5px;
+				background: #183153;
+				font-family: "Montserrat", sans-serif;
+				box-shadow: 0px 6px 24px 0px rgba(0, 0, 0, 0.2);
+				overflow: hidden;
+				cursor: pointer;
+				border: none;
+			}
+
+			button.btn_dlbottom:after, button.btn_dltop:after {
+				content: " ";
+				width: 0%;
+				height: 100%;
+				background: #ffd401;
+				position: absolute;
+				transition: all 0.4s ease-in-out;
+				right: 0;
+			}
+
+			button.btn_dlbottom:hover::after, button.btn_dltop:hover::after {
+				right: auto;
+				left: 0;
+				width: 100%;
+			}
+
+			button.btn_dlbottom span, button.btn_dltop span {
+				text-align: center;
+				text-decoration: none;
+				width: 100%;
+				padding: 10px;
+				color: #fff;
+				font-size: 1.125em;
+				font-weight: 700;
+				letter-spacing: 0.3em;
+				z-index: 20;
+				transition: all 0.3s ease-in-out;
+				font-family: "Zekton Rg", sans-serif;
+				margin-bottom: 0px;
+			}
+			button.btn_dltop span {
+				letter-spacing: 0.2em !important;
+				padding: 8px 15px !important;
+				font-family: "Titillium Web", sans-serif !important;
+			}
+
+			button.btn_dlbottom:hover span, button.btn_dltop:hover span {
+				color: #183153;
+				animation: scaleUp 0.3s ease-in-out;
+			}
+
+			@keyframes scaleUp {
+				0% {
+					transform: scale(1);
+				}
+
+				50% {
+					transform: scale(0.95);
+				}
+
+				100% {
+					transform: scale(1);
+				}
+			}
+
+
+
+			.content.list .data {
+				width: 110px;
+				height: 100px;
+				background-image: none;
+				border-radius: 5px;
+				transition: all .3s;
+				text-align: center;
+			}
+
+			.card {
+				width: inherit;
+				height: inherit;
+				background-color: #272727;
+				border-radius: 5px;
+				transition: all .2s;
+			}
+
+			.card:hover {
+				transform: scale(0.98);
+				border-radius: 5px;
+				height: 100px;
+			}
+
+			.content.list .data:hover {
+				box-shadow: 0px 0px 30px 1px rgba(0, 255, 117, 0.30);
+				background-image: linear-gradient(163deg, #00ff75 0%, #3700ff 100%);
+			}
+
+			.data .card span {
+				height: inherit;
+				width: inherit;
+				display: block;
+				position: relative;
+				padding: 10px 10px;
+				margin-bottom: 0px;
+			}
+		</style>
 	</head>
 	<body>
 		<nav id="header" class="maiyome">
@@ -37,7 +146,9 @@
 					<div class="nav item"><a href="../index.html">Yusatsu Nao</a></div>
 				</div>
 				<div class="nav_download">
-					<div class="nav download">DOWNLOAD</div>
+					<div class="nav download">
+						<button class="btn_dltop" onclick="openLink('https://github.com/YusatsuNao/MaiYome')"><span>Source Code</span></button>
+					</div>
 				</div>
 			</div>
 		</nav>
@@ -47,7 +158,7 @@
 				<div class="info_mid">Easy, booru-like tagging system for a data hoarder like you, that loves collecting anime pictures</div>
 				<div class="info_bottom">
 					<div class="info_sub download">
-						<span>DOWNLOAD</span>
+						<button class="btn_dlbottom" onclick="openLink('https://github.com/YusatsuNao/MaiYome/releases/download/public/MaiYome-1.0-win32-x64.7z')"><span>DOWNLOAD</span></button>
 					</div>
 				</div>
 			</div>
@@ -79,16 +190,16 @@
 							<div class="feature image"></div>
 						</div>
 						<div class="content list">
-							<div class="data active" data-img="../resources/image/maiyome_ft1.png">Booru Tagging System</div>
-							<div class="data" data-img="../resources/image/maiyome_ft2.png">Custom Tagging Presets</div>
-							<div class="data" data-img="../resources/image/maiyome_ft3.png">Easy Import</div>
-							<div class="data" data-img="../resources/image/maiyome_ft4.png">Multiple Viewer Types</div>
-							<div class="data" data-img="../resources/image/maiyome_ft5.png">Built-in Image Viewer</div>
-							<div class="data" data-img="../resources/image/maiyome_ft6.png">Image Comparator</div>
-							<div class="data" data-img="../resources/image/maiyome_ft7.png">Image Fingerprinting</div>
-							<div class="data" data-img="../resources/image/maiyome_ft8.png">Duplicate Finder</div>
-							<div class="data" data-img="../resources/image/maiyome_ft9.png">Database Switcher</div>
-							<div class="data" data-img="../resources/image/maiyome_ft10.png">Import / Export</div>
+							<div class="data active" data-img="../resources/image/maiyome_ft1.webp"><div class="card"><span>Booru Tagging System</span></div></div>
+							<div class="data" data-img="../resources/image/maiyome_ft2.webp"><div class="card"><span>Custom Tagging Presets</span></div></div>
+							<div class="data" data-img="../resources/image/maiyome_ft3.webp"><div class="card"><span>Easy Import</span></div></div>
+							<div class="data" data-img="../resources/image/maiyome_ft4.webp"><div class="card"><span>Multiple Viewer Types</span></div></div>
+							<div class="data" data-img="../resources/image/maiyome_ft5.webp"><div class="card"><span>Built-in Image Viewer</span></div></div>
+							<div class="data" data-img="../resources/image/maiyome_ft6.webp"><div class="card"><span>Image Comparator</span></div></div>
+							<div class="data" data-img="../resources/image/maiyome_ft7.webp"><div class="card"><span>Image Fingerprinting</span></div></div>
+							<div class="data" data-img="../resources/image/maiyome_ft8.webp"><div class="card"><span>Duplicate Finder</span></div></div>
+							<div class="data" data-img="../resources/image/maiyome_ft9.webp"><div class="card"><span>Database Switcher</span></div></div>
+							<div class="data" data-img="../resources/image/maiyome_ft10.webp"><div class="card"><span>Tag Import / Export</span></div></div>
 						</div>
 					</div>
 				</div>
@@ -145,7 +256,9 @@
 				</div>
 			</div>
 			<div id="notes" class="main-content notes">
-				<div class="notes">Honestly, I don't know what to write here, but anyway, if you are data hoarder of images whether an Anime Art, Photos or some other images, you can use this app to manage all of your image, maybe you can use it to manage your image resources, just like a proper DAM, but I prefer this because it has similarity to Booru system, easy to tag and easy to search, if you interested to use this app, you can download it on the link above</div>
+				<div class="notes">
+					Honestly, I don't know what to write here, but anyway, if you are data hoarder of images whether an Anime Art, Photos or some other images, you can use this app to manage all of your image, maybe you can use it to manage your image resources, just like a proper DAM, but I prefer this because it has similarity to Booru system, easy to tag and easy to search, if you interested to use this app, you can download it on the link above
+				</div>
 			</div>
 		</section>	
 		<!-- General Footer -->	
@@ -154,6 +267,7 @@
 		</div>	
 		<!-- Afterload script & css	-->
 		<script src="../js/jquery.min.js"></script>
+		<script src="../resources/js/common_link.js"></script>
 		<script>
 			const tabs = document.querySelectorAll('.data');
 			const imageBox = document.querySelector('.feature.image');

@@ -1,0 +1,14 @@
+var post001 = '{ "title":"New site has been launched", "date":"December 2015", "link":"post1-new-site-has-been-launched" }';
+var post002 = '{ "title":"LINE THEME - Army Commander Released", "date":"Saturday, October 29, 2016", "link":"post2-army-commander-line-theme-released" }';
+var post003 = '{ "title":"3rd Post", "date":"Friday, December 2, 2016", "link":"post3-3rd-post" }';
+var post004 = '{ "title":"Gi(a)rlish Number Anime Rainmeter Released", "date":"Wednesday, December 7, 2016", "link":"post4-giarlish-number-anime-rainmeter-released" }';
+var post005 = '{ "title":"LINE THEME - Glowing Fragment Released", "date":"Thursday, January 5, 2017", "link":"post5-glowing-fragment-line-theme-released" }';
+var post006 = '{ "title":"Anime Icon Winter 2017 Released", "date":"Thursday, January 12, 2017", "link":"post6-anime-icon-winter-2017-released" }';
+var post007 = '{ "title":"LINE THEME - Race Driver Released", "date":"Saturday, January 14, 2017", "link":"post7-race-driver-line-theme-released" }';
+var post008 = '{ "title":"Welcome to my New Domain", "date":"Monday, March 20, 2017", "link":"post8-welcome-to-my-new-domain" }';
+var post009 = '{ "title":"Anime Icon Spring 2017 Released", "date":"Tuesday, May 2, 2017", "link":"post9-anime-icon-spring-2017-released" }';
+var post010 = '{ "title":"LINE THEME - Glowing Fragment Ground Zero Released", "date":"Wednesday, June 21, 2017", "link":"post10-glowing-fragment-ground-zero-line-theme-released" }';
+var post011 = '{ "title":"LINE THEME - Glowing Fragment Scarlet Land Released", "date":"Saturday, July 22, 2017", "link":"post11-glowing-fragment-scarlet-land-line-theme-released" }';
+var post012 = '{ "title":"New Line Theme with Low Price", "date":"Wednesday, January 10, 2018", "link":"post12-new-line-theme-with-low-price" }';
+var post013 = '{ "title":"Girls Frontline Assistant Rainmeter Released", "date":"Thursday, March 28, 2019", "link":"post13-girls-frontline-assistant-rainmeter-released" }';
+var post999 = '{ "title":"", "date":"", "link":"" }';

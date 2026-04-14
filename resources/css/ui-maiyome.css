@@ -1,9 +1,9 @@
 /* Base CSS3 */
 /* *//* *//* */
 *{
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box; }
+margin: 0;
+padding: 0;
+box-sizing: border-box; }
 a {
 	font-size: 14px;
 	font-weight: 600;
@@ -24,9 +24,9 @@ b {
 	font-weight: 800; }
 
 h1 span {
-    background-color: #097ff8;
-    padding: 0px 8px;
-    border-radius: 10px;
+	background-color: #097ff8;
+	padding: 0px 8px;
+	border-radius: 10px;
 }
 span {
 	margin-bottom: 10px;
@@ -52,49 +52,58 @@ body {
 	color: #eee;
 }
 nav {
-    width: -webkit-fill-available;
-    position: fixed;
-    height: 50px;
-    z-index: 99;
-    top: 0px;
+	width: -webkit-fill-available;
+	position: fixed;
+	height: 50px;
+	z-index: 99;
+	top: 0px;
 	background: #030712;
 	height: max-content;
 	border-bottom: 1px solid #474747; }
 #nav_main {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    height: 60px;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	height: 60px;
 	width: max-content;
-    margin: 0px auto;
+	margin: 0px auto;
 }
 .nav_icon {
 	background: transparent url('../../img/maiyome_logo.webp') no-repeat 50% 50% / contain;
 	width: 200px;
-    margin-right: 20px; }
+	margin-right: 20px; }
 .nav_list {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
 	width: 50vw;
 }
-.nav.item, .nav_download {
-    min-width: 50px;
-    height: auto;
-    width: max-content;
-    margin: 0px auto;
-    margin: 20px 10px;
+.nav.item {
+	min-width: 50px;
+	height: auto;
+	width: max-content;
+	margin: 0px auto;
+	margin: 20px 10px;
 }
 
+.nav_download {
+	min-width: 50px;
+	height: auto;
+	width: max-content;
+	margin: 0px auto;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
 
 header {
 	background: transparent;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100vh;
-    z-index: 2; }
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100vh;
+	z-index: 2; }
 
 .header.mesh {
 	background-color: #0f0f14;
@@ -127,22 +136,9 @@ header {
 	margin: 30px 20px 20px 20px;
 }
 .info_sub.download {
-	background: #ffbb18;
 	color: #222222;
 	font-weight: 800;
-	width: 200px;
-	height: max-content;
-	margin: 0px auto;
-	vertical-align: middle;
-	font-size: 20px;
-	border-radius: 10px;
-	display: flex;
-}
-.info_sub.download:hover {
-	background: rgb(190, 134, 4);
-	color: #AAA;
-	font-weight: 800;
-	width: 200px;
+	width: max-content;
 	height: max-content;
 	margin: 0px auto;
 	vertical-align: middle;
@@ -190,7 +186,7 @@ section#notes {
 }
 	.homepage.mesh {
 		background-color: #0f0f14;
-		background-image: radial-gradient(circle at 50% 00%, #222222, transparent 50%), radial-gradient(circle at 80% 40%, #175e59, transparent 50%), radial-gradient(circle at 20% 80%, #260a48, transparent 50%);
+		background-image: radial-gradient(circle at 50% 00%, #222222, transparent 50%), radial-gradient(circle at 80% 40%, #092b28, transparent 50%), radial-gradient(circle at 20% 80%, #140527, transparent 50%);
 		filter: blur(100px);
 		width: 100vw;
 		height: -webkit-fill-available;
@@ -205,12 +201,12 @@ section#notes {
 
 #about {
 	height: max-content;
-    width: -webkit-fill-available;
-    margin: 0px auto;
+	width: -webkit-fill-available;
+	margin: 0px auto;
 	display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    justify-content: center;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: center;
 	padding: 100px 30px 30px 30px;
 }
 
@@ -222,7 +218,7 @@ section#notes {
 	}
 
 	#about .left .image {
-		background: transparent url('../../img/blog/pblog.png') no-repeat 50% 50% / contain;
+		background: transparent url('../../resources/image/maiyome_main_img1.webp') no-repeat 50% 50% / contain;
 		width: 400px;
 		height: 400px;
 	}
@@ -246,13 +242,13 @@ section#notes {
 	}
 
 #features {
-    height: max-content;
-    width: -webkit-fill-available;
-    margin: 0px auto;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    justify-content: center;
+	height: max-content;
+	width: -webkit-fill-available;
+	margin: 0px auto;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: center;
 	padding: 100px 30px 30px 30px;
 }
 
@@ -284,17 +280,19 @@ section#notes {
 		margin-left: 30px;
 		padding-left: 15px;
 		flex-wrap: wrap;
+		height: max-content;
 	}
 
 	/* Tab items */
 	.data {
 		width: 128px;
 		height: 128px;
-		padding: 12px 16px;
+		padding: 0px;
 		cursor: pointer;
 		background: #892424;
 		border-radius: 6px;
 		transition: all 0.2s ease;
+		display: flex;
 	}
 
 	/* Hover */
@@ -311,8 +309,8 @@ section#notes {
 
 #usage {
 	height: max-content;
-    width: -webkit-fill-available;
-    margin: 0px auto;
+	width: -webkit-fill-available;
+	margin: 0px auto;
 	padding: 70px 30px;
 }
 	#usage .head {
@@ -350,8 +348,8 @@ section#notes {
 
 #developers {
 	height: max-content;
-    width: -webkit-fill-available;
-    margin: 0px auto;
+	width: -webkit-fill-available;
+	margin: 0px auto;
 	padding: 30px 30px 20px 30px;
 	display: flex;
 
@@ -408,8 +406,8 @@ section#notes {
 
 #changelog {
 	height: max-content;
-    width: -webkit-fill-available;
-    margin: 0px auto;
+	width: -webkit-fill-available;
+	margin: 0px auto;
 	padding: 20px 30px 30px 30px;
 }
 	.changelog.main {
@@ -458,8 +456,8 @@ section#notes {
 
 #notes {
 	height: max-content;
-    width: -webkit-fill-available;
-    margin: 0px auto;
+	width: -webkit-fill-available;
+	margin: 0px auto;
 	padding: 110px 30px 60px 30px;
 }
 	#notes .notes {
@@ -498,19 +496,19 @@ section#notes {
 .image_insert {
 	background: transparent url(../../img/works/maiyome_showcase.png) no-repeat 50% 50% / contain;
 	transform:  rotateX(30deg) rotateY(10deg) rotateZ(-10deg);
-    width: -webkit-fill-available;
-    height: 700px;
-    z-index: -1;
-    position: fixed;
+	width: -webkit-fill-available;
+	height: 700px;
+	z-index: -1;
+	position: fixed;
 	top: 300px;
 	left: 0px;
 }
 .cube {
-  transform:  scaleX(1) scaleY(1) scaleZ(1) rotateX(24deg) rotateY(24deg) rotateZ(-10deg) translateX(0px) translateY(0px) translateZ(0px) skewX(0deg) skewY(0deg);
+transform:  scaleX(1) scaleY(1) scaleZ(1) rotateX(24deg) rotateY(24deg) rotateZ(-10deg) translateX(0px) translateY(0px) translateZ(0px) skewX(0deg) skewY(0deg);
 }
 .cube-wrap {
-  perspective: 1000px;
-  perspective-origin: 50% 50%;
+perspective: 1000px;
+perspective-origin: 50% 50%;
 }
 
 
