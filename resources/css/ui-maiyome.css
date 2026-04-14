@@ -36,6 +36,12 @@ code {
 	padding: 0px 5px 0px 5px;
 	border-radius: 0px;
 	font-family: "Titillium Web", sans-serif; }
+span.detailed, b.detailed {
+    background: #1c553b;
+    padding: 2px 4px;
+    border-radius: 7px;
+}
+
 #footer {
 	width: -webkit-fill-available;
 	z-index: 99;
@@ -127,7 +133,8 @@ header {
 .info_top {
 	font-weight: 800;
 	font-size: 2.5rem;
-	margin: 20px;
+	margin: 20px 20px 0px 20px;
+	text-shadow: 0 4px 6px rgba(0, 0, 0, 0.4);
 }
 .info_mid {
 	font-size: 1rem;
@@ -333,17 +340,15 @@ section#notes {
 		font-size: 1.5rem;
 		margin: 0px auto;
 		width: 700px;
+		text-align: center;
 	}
 	
 	.usage.main {
-		background: #0d1117;
 		padding: 0;
 		overflow: hidden;
-		border: 1px solid #1f2937;
-		box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
 		max-width: -webkit-fill-available;
 		display: flex;
-		flex-direction: row;
+		justify-content: center;
 	}
 
 	/* Code block */
@@ -374,6 +379,57 @@ section#notes {
 	.usage.details, .usage.direct {
 		text-align: center;
 		padding: 10px 10px;
+	}
+	
+	.usage.list {
+		width: 400px;
+		border-radius: 0.5rem;
+		background-color: #fff;
+		box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 12);
+		border: 0px solid transparent;
+		margin: 0px 10px;
+		background: linear-gradient(to top, rgb(31 41 55 / 50%) 0%, rgb(40 47 61) 100%);
+		backdrop-filter: blur(26px);
+	}
+
+	.usage.list a {
+		text-decoration: none;
+	}
+
+	.usage.data {
+		padding: 1.1rem;
+	}
+
+	.usage.top {
+		object-fit: cover;
+		width: 100%;
+		height: 150px;
+		background-color: rgb(239, 205, 255);
+	}
+
+	.usage.now {
+		padding: 0px;
+	}
+	.info.top {
+		color: #EEE;
+		font-size: 1.125rem;
+		line-height: 1.75rem;
+		font-weight: 600;
+		padding: 10px;
+		background: radial-gradient(circle farthest-side at bottom center, #005873 0%, #003343 100%);
+		text-align: center;
+		position: relative;
+		width: -webkit-fill-available;
+		display: block;
+		border-bottom: 1px solid #eee;
+	}
+
+	.info.bottom {
+		margin-top: 0.5rem;
+		color: #EEE;
+		font-size: 0.875rem;
+		line-height: 1.25rem;
+		padding: 10px;
 	}
 
 
@@ -525,13 +581,13 @@ section#notes {
 
 }
 .image_insert {
-	background: transparent url(../../img/works/maiyome_showcase.png) no-repeat 50% 50% / contain;
-	transform:  rotateX(30deg) rotateY(10deg) rotateZ(-10deg);
+	background: transparent url(../../resources/image/maiyome_main.webp) no-repeat 50% 50% / contain;
+	transform: translateX(15px) translateY(0px) translateZ(0px) rotateX(9deg) rotateY(4deg) rotateZ(-5deg) skewX(5deg) skewY(-1deg);
 	width: -webkit-fill-available;
-	height: 700px;
+	height: 750px;
 	z-index: -1;
 	position: fixed;
-	top: 300px;
+	top: 320px;
 	left: 0px;
 }
 .cube {

@@ -131,6 +131,37 @@
 				padding: 10px 10px;
 				margin-bottom: 0px;
 			}
+
+			.info_top {
+				background: linear-gradient(270deg, #ff75be, #68c5ff, #ffd13b);
+				background-size: 800% 800%;
+
+				-webkit-animation: AnimationName 3s ease infinite;
+				-moz-animation: AnimationName 3s ease infinite;
+				animation: AnimationName 3s ease infinite;
+
+				-webkit-background-clip: text;
+				-webkit-text-fill-color: transparent;
+
+				background-clip: text;
+				color: transparent;
+			}
+						
+			@keyframes AnimationName {
+			0% {
+				background-position: 0% 50%
+			}
+
+			50% {
+				background-position: 100% 50%
+			}
+
+			100% {
+				background-position: 0% 50%
+			}
+			}
+
+
 		</style>
 	</head>
 	<body>
@@ -211,32 +242,44 @@
 					</div>
 				</div>
 			<div id="usage" class="main-content usage">
-				<div class="usage head">How to Use?</div>
+				<div class="usage head">How to Use ?</div>
 				<div class="usage main">
 					<div class="usage list">
-						<div class="list top">Importing Your Image/Folder</div>
-						<div class="list info">
-							<span>1. Just click the <b>IMPORT</b> button</span><br/>
-							<span>2. Select the image or the folder you want to import</span><br/>
-							<!-- <span>, or you can just drag and drop it</span><br/> -->
-							<span>3. And there you go, the images are ready to be tagged</span>
+						<div class="usage top"></div>
+						<div class="usage now">
+							<span class="info top" ref="#">Importing Your Image/Folder</span>
+
+							<p class="info bottom">
+								<span>1. Just click the <b>IMPORT</b> button</span><br/>
+								<span>2. Select the <b>Image</b> or the <b>Folder</b> you want to import</span><br/>
+								<!-- <span>, or you can just drag and drop it</span><br/> -->
+								<span>3. And there you go, the images are ready to be tagged</span>
+							</p>
 						</div>
 					</div>
 					<div class="usage list">
-						<div class="list top">Tagging / Preset Tagging</div>
-						<div class="list info">
-							<span>1. Select your image/multiple image from the list</span><br/>
-							<span>2. From the Apply TAG, search and input the tag you want and press Enter</span><br/>
-							<span>or you can use preset by typing <code>Preset:{your preset name}</code> in the Apply TAG Box</span><br/>
-							<span>3. And all images you select are tagged automatically</span><br/>
-							<span>4. If you want to search your favourite image, you can search it using the tag, md5, file name, and folder name</span><br/>
-							<span>5. and you also can import/export your tagged image to or from Json or the image itself</span>
+						<div class="usage top"></div>
+						<div class="usage now">
+							<span class="info top" ref="#">Tagging / Preset Tagging</span>
+
+							<p class="info bottom">
+								<span>1. Select your <b>Image/Multiple Image</b> from the list</span><br/>
+								<span>2. in the <b>Apply TAG</b>, search and input the tag you want to add and then press Enter</span><br/>
+								<span>or you can use preset by typing <span class="detailed">Preset:{your preset name}</span> in the <b>Apply TAG</b> Box</span><br/>
+								<span>3. And then all Images you select are tagged automatically</span><br/>
+								<span>4. If you want to search your favourite image, you can search it using the <b class="detailed">TAG</b>, <b class="detailed">MD5</b>, <b class="detailed">FileName</b>, and <b class="detailed">Folder Name</b></span><br/>
+								<span>5. and you also can <b>Import/Export</b> your tagged image to or from Json or the image itself</span>
+							</p>
 						</div>
 					</div>
 					<div class="usage list">
-						<div class="list top">Fingerprinting & Comparator</div>
-						<div class="list info">
-							<span>If you have the same image but in different folder, you can use the Fingerprinting to compare both images, is there any differences or not</span>
+						<div class="usage top"></div>
+						<div class="usage now">
+							<span class="info top" ref="#">Fingerprinting & Comparator</span>
+
+							<p class="info bottom">
+								<span>If you have the same image but in different folder, you can use Fingerprinting to compare both images, is there any differences or not</span>
+							</p>
 						</div>
 					</div>
 				</div>
