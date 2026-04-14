@@ -221,6 +221,7 @@ section#notes {
 		background: transparent url('../../resources/image/maiyome_main_img1.webp') no-repeat 50% 50% / contain;
 		width: 400px;
 		height: 400px;
+		border-radius: 10px;
 	}
 
 	#about .right {
@@ -271,6 +272,13 @@ section#notes {
 		transition: background-image 0.3s ease;
 	}
 
+	.content.main {
+		display: flex;
+		flex-direction: column;
+		flex-wrap: nowrap;
+		justify-content: flex-start;
+	}
+
 	/* Right side tabs */
 	.content.list {
 		width: 700px;
@@ -280,6 +288,13 @@ section#notes {
 		margin-left: 30px;
 		padding-left: 15px;
 		flex-wrap: wrap;
+		height: max-content;
+	}
+
+	.content.info {
+		width: 700px;
+		margin: 20px 0px 0px 30px;
+		padding-left: 15px;
 		height: max-content;
 	}
 
@@ -320,31 +335,47 @@ section#notes {
 		width: 700px;
 	}
 	
-	#usage .main {
-		padding: 15px;
-		font-size: 1rem;
-		margin: 0px auto;
-		width: 700px;
+	.usage.main {
+		background: #0d1117;
+		padding: 0;
+		overflow: hidden;
+		border: 1px solid #1f2937;
+		box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+		max-width: -webkit-fill-available;
 		display: flex;
 		flex-direction: row;
-		flex-wrap: nowrap;
 	}
 
-	#usage .main .usage.list:nth-child(1){
-		background-color: red;
-		height: 200px;
-		width: 200px;
+	/* Code block */
+	.usage.main code {
+		display: block;
+		padding: 10px;
+		color: #e6edf3;
+		font-size: 14px;
 	}
-	#usage .main .usage.list:nth-child(2){
-		background-color: blue;
-		height: 200px;
-		width: 200px;
+	
+	.usage .list.top {
+		content: '';
+		display: block;
+		width: 600px;
+		height: 36px;
+		padding: 5px;
+		text-align: center;
+		background: #161b22;
+		border-bottom: 1px solid #1f2937;
 	}
-	#usage .main .usage.list:nth-child(3){
-		background-color: green;
-		height: 200px;
-		width: 200px;
+
+	/* Optional: command style */
+	.usage.main code span {
+		color: #7ee787;
+		font-family: 'consolas' !important;
 	}
+	
+	.usage.details, .usage.direct {
+		text-align: center;
+		padding: 10px 10px;
+	}
+
 
 #developers {
 	height: max-content;
