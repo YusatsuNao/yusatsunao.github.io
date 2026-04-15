@@ -16,8 +16,8 @@ window.addEventListener('scroll', function() {
 	var scrolledDistance = window.scrollY || window.pageYOffset;
 	var oneRem = 500;			  
 	if (scrolledDistance > oneRem) {
-	nav.classList.add('fixed');
+		nav.classList.add('fixed');
 	} else {
-	nav.classList.remove('fixed');
+		nav.classList.remove('fixed');
 	}
 });

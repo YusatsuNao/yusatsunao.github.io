@@ -23,7 +23,38 @@
 	<!-- Front Page script & css-->
 		<link rel="stylesheet" href="../css/server.css">
 		<link rel="stylesheet" href="../resources/css/ui-maiyome.css">
+		<script>
+		</script>
 		<style>
+			button.btn_dlbottom::before {
+				content: "";
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 0%;
+				height: 100%;
+				background: #ffd401;
+				z-index: 1;
+
+				animation: introSweep 0.8s ease-in-out 0.5s;
+				pointer-events: none;
+			}
+			@keyframes introSweep {
+				0% {
+					width: 0%;
+					left: 0;
+				}
+				40% {
+					width: 100%;
+					left: 0;
+				}
+				100% {
+					width: 0%;
+					left: 100%;
+				}
+			}
+
+
 			button.btn_dlbottom, button.btn_dltop {
 				position: relative;
 				display: flex;
@@ -92,8 +123,6 @@
 					transform: scale(1);
 				}
 			}
-
-
 
 			.content.list .data {
 				width: 110px;
@@ -165,6 +194,7 @@
 		</style>
 	</head>
 	<body>
+		<div id="top"></div>
 		<nav id="header" class="maiyome">
 			<div id="nav_main">
 				<div class="nav_icon"></div>
@@ -174,6 +204,7 @@
 					<div class="nav item"><a href="#usage">Usage</a></div>
 					<div class="nav item"><a href="#developers">Development</a></div>
 					<div class="nav item"><a href="#changelog">Changelog</a></div>
+					<div class="nav item"><a href="#top">Download</a></div>
 					<div class="nav item"><a href="../index.html">Yusatsu Nao</a></div>
 				</div>
 				<div class="nav_download">
@@ -245,7 +276,7 @@
 				<div class="usage head">How to Use ?</div>
 				<div class="usage main">
 					<div class="usage list">
-						<div class="usage top"></div>
+						<div class="usage top one"></div>
 						<div class="usage now">
 							<span class="info top" ref="#">Importing Your Image/Folder</span>
 
@@ -258,7 +289,7 @@
 						</div>
 					</div>
 					<div class="usage list">
-						<div class="usage top"></div>
+						<div class="usage top two"></div>
 						<div class="usage now">
 							<span class="info top" ref="#">Tagging / Preset Tagging</span>
 
@@ -273,7 +304,7 @@
 						</div>
 					</div>
 					<div class="usage list">
-						<div class="usage top"></div>
+						<div class="usage top three"></div>
 						<div class="usage now">
 							<span class="info top" ref="#">Fingerprinting & Comparator</span>
 
@@ -331,6 +362,7 @@
 		</div>	
 		<!-- Afterload script & css	-->
 		<script src="../js/jquery.min.js"></script>
+		<script src="../resources/js/common_navigation_enable_scroll.js"></script>
 		<script src="../resources/js/common_link.js"></script>
 		<script>
 			const tabs = document.querySelectorAll('.data');
