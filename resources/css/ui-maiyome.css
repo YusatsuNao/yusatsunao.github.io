@@ -419,6 +419,13 @@ section#notes {
 	.usage.top.one {
 		background: transparent url('../../resources/image/maiyome_sub_img1.webp') no-repeat 50% 50% / contain;
 	}
+	.usage.top.two {
+		background: transparent url('../../resources/image/maiyome_sub_img2.webp') no-repeat 50% 50% / contain;
+	}
+	.usage.top.three {
+		background: transparent url('../../resources/image/maiyome_sub_img3.webp') no-repeat 50% 50% / contain;
+	}
+
 
 	.usage.now {
 		padding: 0px;
