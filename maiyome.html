@@ -1,1 +1,483 @@
-TEST
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+	<!-- General meta tag-->
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="icon" type="image/png" href="../img/maiyome.ico">
+		<link rel="canonical" href="http://yusatsunao.com/">
+	<!-- Front Page meta tag -->
+		<title>MaiYome</title>
+		<meta name="author" content="Yusatsu Nao">
+		<meta name="description" content="MaiYome - A Local Based Booru for Your Waifu Collection">
+		<meta name="keywords" content="Yusatsu Nao, Yusatsu, Nao, Yusatsu Nao Official Site, Fukumura Tatsuya, Anime, Rainmter, Icons, Windows, LINE, Theme, Sticker, LINE THEME, LINE Sticker, Anime Rainmeter, Anime Icons, Creator, Youtube Channel, MaiYome">
+		<meta name="copyright" content="Copyright &#169; Yusatsu Nao">
+		<meta name="robots" content="follow,index">
+		<meta property="og:title" content="MaiYome">
+		<meta property="og:type" content="Personal Website">
+		<meta property="og:description" content="MaiYome - A Local Based Booru for Your Waifu Collection">
+		<meta property="og:image" content="https://yusatsunao.github.io/img/maiyome.png">
+		<meta property="og:url" content="https://yusatsunao.github.io/">
+		<meta property="og:site_name" content="MaiYome - The Local Based Booru">
+		<meta property="og:locale" content="en_US">
+	<!-- Front Page script & css-->
+		<link rel="stylesheet" href="resources/css/server.css">
+		<link rel="stylesheet" href="resources/css/ui-maiyome.css">
+		<script>
+		</script>
+		<style>
+			button.btn_dlbottom::before {
+				content: "";
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 0%;
+				height: 100%;
+				background: #ffd401;
+				z-index: 1;
+
+				animation: introSweep 0.8s ease-in-out 0.5s;
+				pointer-events: none;
+			}
+			@keyframes introSweep {
+				0% {
+					width: 0%;
+					left: 0;
+				}
+				40% {
+					width: 100%;
+					left: 0;
+				}
+				100% {
+					width: 0%;
+					left: 100%;
+				}
+			}
+
+
+			button.btn_dlbottom, button.btn_dltop {
+				position: relative;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				border-radius: 5px;
+				background: #183153;
+				font-family: "Montserrat", sans-serif;
+				box-shadow: 0px 6px 24px 0px rgba(0, 0, 0, 0.2);
+				overflow: hidden;
+				cursor: pointer;
+				border: none;
+			}
+
+			button.btn_dlbottom:after, button.btn_dltop:after {
+				content: " ";
+				width: 0%;
+				height: 100%;
+				background: #ffd401;
+				position: absolute;
+				transition: all 0.4s ease-in-out;
+				right: 0;
+			}
+
+			button.btn_dlbottom:hover::after, button.btn_dltop:hover::after {
+				right: auto;
+				left: 0;
+				width: 100%;
+			}
+
+			button.btn_dlbottom span, button.btn_dltop span {
+				text-align: center;
+				text-decoration: none;
+				width: 100%;
+				padding: 10px;
+				color: #fff;
+				font-size: 1.125em;
+				font-weight: 700;
+				letter-spacing: 0.3em;
+				z-index: 20;
+				transition: all 0.3s ease-in-out;
+				font-family: "Zekton Rg", sans-serif;
+				margin-bottom: 0px;
+			}
+			button.btn_dltop span {
+				letter-spacing: 0.2em !important;
+				padding: 8px 15px !important;
+				font-family: "Titillium Web", sans-serif !important;
+			}
+
+			button.btn_dlbottom:hover span, button.btn_dltop:hover span {
+				color: #183153;
+				animation: scaleUp 0.3s ease-in-out;
+			}
+
+			@keyframes scaleUp {
+				0% {
+					transform: scale(1);
+				}
+
+				50% {
+					transform: scale(0.95);
+				}
+
+				100% {
+					transform: scale(1);
+				}
+			}
+
+			.content.list .data {
+				width: 110px;
+				height: 100px;
+				background-image: none;
+				border-radius: 5px;
+				transition: all .3s;
+				text-align: center;
+			}
+
+			.card {
+				width: inherit;
+				height: inherit;
+				background-color: #272727;
+				border-radius: 5px;
+				transition: all .2s;
+			}
+
+			.card:hover,
+			.data.active .card {
+				transform: scale(0.98);
+				border-radius: 5px;
+				height: 100px;
+			}
+
+			/* Container hover + active */
+			.content.list .data:hover,
+			.content.list .data.active {
+				box-shadow: 0px 0px 30px 1px rgba(0, 255, 117, 0.30);
+				background-image: linear-gradient(163deg, #00ff75 0%, #3700ff 100%);
+			}
+
+			.data .card span {
+				height: inherit;
+				width: inherit;
+				display: block;
+				position: relative;
+				padding: 10px 10px;
+				margin-bottom: 0px;
+			}
+
+			.info_top {
+				background: linear-gradient(270deg, #ff75be, #68c5ff, #ffd13b);
+				background-size: 800% 800%;
+
+				-webkit-animation: AnimationName 3s ease infinite;
+				-moz-animation: AnimationName 3s ease infinite;
+				animation: AnimationName 3s ease infinite;
+
+				-webkit-background-clip: text;
+				-webkit-text-fill-color: transparent;
+
+				background-clip: text;
+				color: transparent;
+			}
+						
+			@keyframes AnimationName {
+			0% {
+				background-position: 0% 50%
+			}
+
+			50% {
+				background-position: 100% 50%
+			}
+
+			100% {
+				background-position: 0% 50%
+			}
+			}
+
+
+		</style>
+	</head>
+	<body>
+		<div id="top"></div>
+		<nav id="header" class="maiyome">
+			<div id="nav_main">
+				<div class="nav_icon"></div>
+				<div class="nav_list_activator">
+					<div class="icon"></div>
+				</div>
+				<div class="nav_list">
+					<div class="nav_container">
+						<div class="nav item"><a href="#about">About</a></div>
+						<div class="nav item"><a href="#features">Features</a></div>
+						<div class="nav item"><a href="#usage">Usage</a></div>
+						<div class="nav item"><a href="#developers">Development</a></div>
+						<div class="nav item"><a href="#changelog">Changelog</a></div>
+						<div class="nav item"><a href="#top">Download</a></div>
+						<div class="nav item"><a href="index.html">Yusatsu Nao</a></div>
+					</div>
+				</div>
+				<div class="nav_download">
+					<div class="nav download">
+						<button class="btn_dltop" onclick="openLink('https://github.com/YusatsuNao/MaiYome')"><span>Source Code</span></button>
+					</div>
+				</div>
+			</div>
+		</nav>
+		<header id="top" class="maiyome">
+			<div id="info_main">
+				<div class="info_top">A Local Based Booru for Your Waifu Collection</div>
+				<div class="info_mid">Easy, booru-like tagging system for a data hoarder like you, that loves collecting anime pictures</div>
+				<div class="info_bottom">
+					<div class="info_sub download">
+						<button class="btn_dlbottom" onclick="openLink('https://github.com/YusatsuNao/MaiYome/releases/download/public/MaiYome-1.0-win32-x64.7z')"><span>DOWNLOAD</span></button>
+					</div>
+				</div>
+			</div>
+			<div id="insert">
+				<div class="insert_header">
+					<div class="image_insert"></div>
+				</div>
+			</div>
+			<div class="header mesh"></div>
+		</header>
+		<section id="homepage" class="maiyome">
+			<div class="homepage mesh"></div>
+			<div id="top_most" class="main-content top_most"></div>
+			<div id="about" class="main-content about">
+				<div class="about left">
+					<div class="about image"></div>
+				</div>
+				<div class="about right">
+					<div class="about head">What is MaiYome?</div>
+					<div class="about main">
+						<h1><span class="h1 text">MaiYome</span> is <b>"JUST A LOCAL BASED BOORU GALLERY DESKTOP APPLICATION".</b></h1>
+						<br/>
+						<div>Mai is the japanization of the word "My" in english and "Yome" means wife in Japanese, and then combining it become "MaiYome", or something like MaiWaifu / My Waifu</div>
+						<br/>
+						<div>So, basically it's a DAM or Digital Asset Management-like software to manage all of your waifu images collection which focuses on Tag Management just like a booru site but it's locally saved. The UI is very simple, a filter tag, and tag editor to remove or add to your image, also an exporter directly to the image file ( which will change the MD5 ) or just export to .json file.</div>
+					</div>
+				</div>
+			</div>
+				<div id="features" class="main-content features">
+					<div class="feature content">
+						<div class="content image">
+							<div class="feature image"></div>
+						</div>
+						<div class="content main">
+							<div class="content list">
+								<div class="data"><div class="card"><span>Booru Tagging System</span></div></div>
+								<div class="data"><div class="card"><span>Custom Tagging Presets</span></div></div>
+								<div class="data"><div class="card"><span>Easy Import</span></div></div>
+								<div class="data"><div class="card"><span>Multiple Viewer Types</span></div></div>
+								<div class="data"><div class="card"><span>Built-in Image Viewer</span></div></div>
+								<div class="data"><div class="card"><span>Image Comparator</span></div></div>
+								<div class="data"><div class="card"><span>Image Fingerprinting</span></div></div>
+								<div class="data"><div class="card"><span>Duplicate Finder</span></div></div>
+								<div class="data"><div class="card"><span>Database Switcher</span></div></div>
+								<div class="data"><div class="card"><span>Tag Import / Export</span></div></div>
+							</div>
+							<div class="content info">
+								<div class="info">
+									test
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			<div id="usage" class="main-content usage">
+				<div class="usage head">How to Use ?</div>
+				<div class="usage main">
+					<div class="usage list">
+						<div class="usage top one">
+							<img src="resources/image/maiyome_sub_img1.webp">
+						</div>
+						<div class="usage now">
+							<span class="info top" ref="#">Importing Your Image/Folder</span>
+
+							<p class="info bottom">
+								<span>1. Just click the <b>IMPORT</b> button</span><br/>
+								<span>2. Select the <b>Image</b> or the <b>Folder</b> you want to import</span><br/>
+								<!-- <span>, or you can just drag and drop it</span><br/> -->
+								<span>3. And there you go, the images are ready to be tagged</span>
+							</p>
+						</div>
+					</div>
+					<div class="usage list">
+						<div class="usage top two">
+							<img src="resources/image/maiyome_sub_img2.webp">
+						</div>
+						<div class="usage now">
+							<span class="info top" ref="#">Tagging / Preset Tagging</span>
+
+							<p class="info bottom">
+								<span>1. Select your <b>Image/Multiple Image</b> from the list</span><br/>
+								<span>2. in the <b>Apply TAG</b>, search and input the tag you want to add and then press Enter</span><br/>
+								<span>or you can use preset by typing <span class="detailed">Preset:{your preset name}</span> in the <b>Apply TAG</b> Box</span><br/>
+								<span>3. And then all Images you select are tagged automatically</span><br/>
+								<span>4. If you want to search your favourite image, you can search it using the <b class="detailed">TAG</b>, <b class="detailed">MD5</b>, <b class="detailed">FileName</b>, and <b class="detailed">Folder Name</b></span><br/>
+								<span>5. and you also can <b>Import/Export</b> your tagged image to or from Json or the image itself</span>
+							</p>
+						</div>
+					</div>
+					<div class="usage list">
+						<div class="usage top three">
+							<img src="resources/image/maiyome_sub_img3.webp">
+						</div>
+						<div class="usage now">
+							<span class="info top" ref="#">Fingerprinting & Comparator</span>
+
+							<p class="info bottom">
+								<span>If you have the same image but in different folder, you can use Fingerprinting to compare both images, is there any differences or not</span>
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div id="developers" class="main-content developers">
+				<div class="developers top">
+					<div class="developers head">Custom Development ?</div>
+					<div class="developers main">
+						<!-- <div class="developers details"></div> -->
+						<div class="developers code">
+							<code class="maiyome code install">
+								<span>git clone https://github.com/YusatsuNao/MaiYome.git</span><br/>
+								<span>cd "MaiYome/src"</span><br/>
+								<span>npm install</span><br/>
+								<span>npm run start</span>
+							</code>
+							<code>
+								⚠️ YOU NEED TO USE : <b>better-sqlite3 @11.9.1</b><br/>
+								⚠️ Put "ExifTool.exe" and all its necessary dependency into <span>module/exiftool/exiftool.exe</span>
+							</code>
+						</div>
+						<div class="developers direct">
+							If you want to build it or add another feature by yourself, you can fork it!<br/>
+							For more info check the <a href="https://github.com/YusatsuNao/MaiYome">Github Repository ►<i class="links"></i></a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div id="changelog" class="main-content changelog">
+				<div class="changelog top">
+					<div class="changelog head">Latest Changelog</div>
+					<div class="changelog main">
+						<code>
+							<span>Version 1.0</span><br/>
+							<span>　- MaiYome Public Release</span>
+						</code>
+					</div>
+				</div>
+			</div>
+			<div id="notes" class="main-content notes">
+				<div class="notes">
+					Honestly, I don't know what to write here, but anyway, if you are data hoarder of images whether an Anime Art, Photos or some other images, you can use this app to manage all of your image, maybe you can use it to manage your image resources, just like a proper DAM, but I prefer this because it has similarity to Booru system, easy to tag and easy to search, if you interested to use this app, you can download it on the link above
+				</div>
+			</div>	
+		</section>	
+		<!-- General Footer -->			
+			<div id="footer">
+				<div class="credit">Copyright &#169; 2015 - <script>document.write(new Date().getFullYear());</script> Yusatsu Nao</div>
+			</div>	
+		<!-- Afterload script & css	-->
+		<script src="resources/js/jquery.min.js"></script>
+		<script src="resources/js/common_navigation_enable_scroll.js"></script>		
+		<script src="resources/js/common_link.js"></script>
+		<script>
+			const tabs = document.querySelectorAll('.data');
+			const imageBox = document.querySelector('.feature.image');
+			const infoBox = document.querySelector('.content.info .info');
+
+			const infoTexts = [
+				"Using similar tagging system like Booru, really simple and very customizeable",
+				"Creating and Using the Preset to automatically set multiple tags to an Image at once, no need to add one by one",
+				"Just Click Import and Select the folder \n (in Version 2) or just Drag & drop the image to the app",
+				"Switch between Masonry, Grid or Lists to see all your Images",
+				"Built-in viewer optimized for high-resolution artwork.",
+				"Compare multiple images side-by-side with precision.",
+				"Image fingerprinting to detect similar file from different folder.",
+				"Automatically detect similar image based on the fingerprint",
+				"(in V2) Seamlessly switch between multiple databases.",
+				"Import and Export Tags to/From a Json file or directly to the Image itself (will change the file md5)"
+			];
+
+			let currentIndex = [...tabs].findIndex(t => t.classList.contains('active'));
+			if (currentIndex === -1) currentIndex = 0;
+
+			let interval;
+
+			/* USES data-img inside element
+			function setActive(index) {
+				tabs.forEach(t => t.classList.remove('active'));
+
+				const tab = tabs[index];
+				tab.classList.add('active');
+
+				imageBox.style.backgroundImage = `url('${tab.dataset.img}')`;
+
+				currentIndex = index;
+			}
+			*/
+						
+			function getImagePath(index) {
+				return `resources/image/maiyome_ft${index + 1}.webp`;
+			}
+
+			function setActive(index) {
+				tabs.forEach(t => t.classList.remove('active'));
+
+				const tab = tabs[index];
+				tab.classList.add('active');
+
+				imageBox.style.backgroundImage = `url('${getImagePath(index)}')`;
+
+				infoBox.textContent = infoTexts[index] || "";
+
+				currentIndex = index;
+			}
+
+			function startAuto() {
+				clearInterval(interval);
+				interval = setInterval(() => {
+					let nextIndex = (currentIndex + 1) % tabs.length;
+					setActive(nextIndex);
+				}, 500000);
+			}
+
+			function resetAuto(index) {
+				setActive(index);
+				startAuto();
+			}
+
+			// Init
+			if (tabs.length > 0) {
+				setActive(currentIndex);
+				startAuto();
+			}
+
+			// Click support
+			tabs.forEach((tab, index) => {
+				tab.addEventListener('click', () => {
+					resetAuto(index);
+				});
+			});
+		</script>
+		<script>
+			document.addEventListener("DOMContentLoaded", function () {
+				const menuBtn = document.querySelector(".nav_list_activator");
+				const navList = document.querySelector(".nav_list");
+				const links = document.querySelectorAll(".nav_list a");
+
+				// Open / toggle menu
+				menuBtn.addEventListener("click", function () {
+					navList.classList.toggle("active");
+				});
+
+				// Close menu when any link is clicked
+				links.forEach(link => {
+					link.addEventListener("click", function () {
+						navList.classList.remove("active");
+					});
+				});
+			});
+		</script>
+	</body>	
+</html>	

@@ -141,13 +141,16 @@
 				transition: all .2s;
 			}
 
-			.card:hover {
+			.card:hover,
+			.data.active .card {
 				transform: scale(0.98);
 				border-radius: 5px;
 				height: 100px;
 			}
 
-			.content.list .data:hover {
+			/* Container hover + active */
+			.content.list .data:hover,
+			.content.list .data.active {
 				box-shadow: 0px 0px 30px 1px rgba(0, 255, 117, 0.30);
 				background-image: linear-gradient(163deg, #00ff75 0%, #3700ff 100%);
 			}
@@ -198,14 +201,19 @@
 		<nav id="header" class="maiyome">
 			<div id="nav_main">
 				<div class="nav_icon"></div>
+				<div class="nav_list_activator">
+					<div class="icon"></div>
+				</div>
 				<div class="nav_list">
-					<div class="nav item"><a href="#about">About</a></div>
-					<div class="nav item"><a href="#features">Features</a></div>
-					<div class="nav item"><a href="#usage">Usage</a></div>
-					<div class="nav item"><a href="#developers">Development</a></div>
-					<div class="nav item"><a href="#changelog">Changelog</a></div>
-					<div class="nav item"><a href="#top">Download</a></div>
-					<div class="nav item"><a href="../index.html">Yusatsu Nao</a></div>
+					<div class="nav_container">
+						<div class="nav item"><a href="#about">About</a></div>
+						<div class="nav item"><a href="#features">Features</a></div>
+						<div class="nav item"><a href="#usage">Usage</a></div>
+						<div class="nav item"><a href="#developers">Development</a></div>
+						<div class="nav item"><a href="#changelog">Changelog</a></div>
+						<div class="nav item"><a href="#top">Download</a></div>
+						<div class="nav item"><a href="../index.html">Yusatsu Nao</a></div>
+					</div>
 				</div>
 				<div class="nav_download">
 					<div class="nav download">
@@ -225,12 +233,15 @@
 				</div>
 			</div>
 			<div id="insert">
-				<div class="image_insert"></div>
+				<div class="insert_header">
+					<div class="image_insert"></div>
+				</div>
 			</div>
 			<div class="header mesh"></div>
 		</header>
 		<section id="homepage" class="maiyome">
 			<div class="homepage mesh"></div>
+			<div id="top_most" class="main-content top_most"></div>
 			<div id="about" class="main-content about">
 				<div class="about left">
 					<div class="about image"></div>
@@ -253,16 +264,16 @@
 						</div>
 						<div class="content main">
 							<div class="content list">
-								<div class="data active" data-img="../resources/image/maiyome_ft1.webp"><div class="card"><span>Booru Tagging System</span></div></div>
-								<div class="data" data-img="../resources/image/maiyome_ft2.webp"><div class="card"><span>Custom Tagging Presets</span></div></div>
-								<div class="data" data-img="../resources/image/maiyome_ft3.webp"><div class="card"><span>Easy Import</span></div></div>
-								<div class="data" data-img="../resources/image/maiyome_ft4.webp"><div class="card"><span>Multiple Viewer Types</span></div></div>
-								<div class="data" data-img="../resources/image/maiyome_ft5.webp"><div class="card"><span>Built-in Image Viewer</span></div></div>
-								<div class="data" data-img="../resources/image/maiyome_ft6.webp"><div class="card"><span>Image Comparator</span></div></div>
-								<div class="data" data-img="../resources/image/maiyome_ft7.webp"><div class="card"><span>Image Fingerprinting</span></div></div>
-								<div class="data" data-img="../resources/image/maiyome_ft8.webp"><div class="card"><span>Duplicate Finder</span></div></div>
-								<div class="data" data-img="../resources/image/maiyome_ft9.webp"><div class="card"><span>Database Switcher</span></div></div>
-								<div class="data" data-img="../resources/image/maiyome_ft10.webp"><div class="card"><span>Tag Import / Export</span></div></div>
+								<div class="data"><div class="card"><span>Booru Tagging System</span></div></div>
+								<div class="data"><div class="card"><span>Custom Tagging Presets</span></div></div>
+								<div class="data"><div class="card"><span>Easy Import</span></div></div>
+								<div class="data"><div class="card"><span>Multiple Viewer Types</span></div></div>
+								<div class="data"><div class="card"><span>Built-in Image Viewer</span></div></div>
+								<div class="data"><div class="card"><span>Image Comparator</span></div></div>
+								<div class="data"><div class="card"><span>Image Fingerprinting</span></div></div>
+								<div class="data"><div class="card"><span>Duplicate Finder</span></div></div>
+								<div class="data"><div class="card"><span>Database Switcher</span></div></div>
+								<div class="data"><div class="card"><span>Tag Import / Export</span></div></div>
 							</div>
 							<div class="content info">
 								<div class="info">
@@ -276,7 +287,9 @@
 				<div class="usage head">How to Use ?</div>
 				<div class="usage main">
 					<div class="usage list">
-						<div class="usage top one"></div>
+						<div class="usage top one">
+							<img src="../../resources/image/maiyome_sub_img1.webp">
+						</div>
 						<div class="usage now">
 							<span class="info top" ref="#">Importing Your Image/Folder</span>
 
@@ -289,7 +302,9 @@
 						</div>
 					</div>
 					<div class="usage list">
-						<div class="usage top two"></div>
+						<div class="usage top two">
+							<img src="../../resources/image/maiyome_sub_img2.webp">
+						</div>
 						<div class="usage now">
 							<span class="info top" ref="#">Tagging / Preset Tagging</span>
 
@@ -304,7 +319,9 @@
 						</div>
 					</div>
 					<div class="usage list">
-						<div class="usage top three"></div>
+						<div class="usage top three">
+							<img src="../../resources/image/maiyome_sub_img3.webp">
+						</div>
 						<div class="usage now">
 							<span class="info top" ref="#">Fingerprinting & Comparator</span>
 
@@ -354,23 +371,40 @@
 				<div class="notes">
 					Honestly, I don't know what to write here, but anyway, if you are data hoarder of images whether an Anime Art, Photos or some other images, you can use this app to manage all of your image, maybe you can use it to manage your image resources, just like a proper DAM, but I prefer this because it has similarity to Booru system, easy to tag and easy to search, if you interested to use this app, you can download it on the link above
 				</div>
-			</div>
+			</div>	
 		</section>	
-		<!-- General Footer -->	
-		<div id="footer">	
-			<div class="credit">Copyright &#169; 2015 - <script>document.write(new Date().getFullYear());</script> Yusatsu Nao</div>
-		</div>	
+		<!-- General Footer -->			
+			<div id="footer">
+				<div class="credit">Copyright &#169; 2015 - <script>document.write(new Date().getFullYear());</script> Yusatsu Nao</div>
+			</div>	
 		<!-- Afterload script & css	-->
 		<script src="../js/jquery.min.js"></script>
-		<script src="../resources/js/common_navigation_enable_scroll.js"></script>
+		<script src="../resources/js/common_navigation_enable_scroll.js"></script>		
 		<script src="../resources/js/common_link.js"></script>
 		<script>
 			const tabs = document.querySelectorAll('.data');
 			const imageBox = document.querySelector('.feature.image');
+			const infoBox = document.querySelector('.content.info .info');
 
-			let currentIndex = 0;
+			const infoTexts = [
+				"Using similar tagging system like Booru, really simple and very customizeable",
+				"Creating and Using the Preset to automatically set multiple tags to an Image at once, no need to add one by one",
+				"Just Click Import and Select the folder \n (in Version 2) or just Drag & drop the image to the app",
+				"Switch between Masonry, Grid or Lists to see all your Images",
+				"Built-in viewer optimized for high-resolution artwork.",
+				"Compare multiple images side-by-side with precision.",
+				"Image fingerprinting to detect similar file from different folder.",
+				"Automatically detect similar image based on the fingerprint",
+				"(in V2) Seamlessly switch between multiple databases.",
+				"Import and Export Tags to/From a Json file or directly to the Image itself (will change the file md5)"
+			];
+
+			let currentIndex = [...tabs].findIndex(t => t.classList.contains('active'));
+			if (currentIndex === -1) currentIndex = 0;
+
 			let interval;
 
+			/* USES data-img inside element
 			function setActive(index) {
 				tabs.forEach(t => t.classList.remove('active'));
 
@@ -378,32 +412,70 @@
 				tab.classList.add('active');
 
 				imageBox.style.backgroundImage = `url('${tab.dataset.img}')`;
+
+				currentIndex = index;
+			}
+			*/
+						
+			function getImagePath(index) {
+				return `../resources/image/maiyome_ft${index + 1}.webp`;
+			}
+
+			function setActive(index) {
+				tabs.forEach(t => t.classList.remove('active'));
+
+				const tab = tabs[index];
+				tab.classList.add('active');
+
+				imageBox.style.backgroundImage = `url('${getImagePath(index)}')`;
+
+				infoBox.textContent = infoTexts[index] || "";
+
 				currentIndex = index;
 			}
 
 			function startAuto() {
+				clearInterval(interval);
 				interval = setInterval(() => {
-				let nextIndex = (currentIndex + 1) % tabs.length;
-				setActive(nextIndex);
-				}, 5000);
+					let nextIndex = (currentIndex + 1) % tabs.length;
+					setActive(nextIndex);
+				}, 500000);
 			}
 
 			function resetAuto(index) {
-				clearInterval(interval);
 				setActive(index);
 				startAuto();
 			}
 
 			// Init
 			if (tabs.length > 0) {
-				setActive(0);
+				setActive(currentIndex);
 				startAuto();
 			}
 
-			// Click support (resets timer)
+			// Click support
 			tabs.forEach((tab, index) => {
 				tab.addEventListener('click', () => {
-				resetAuto(index);
+					resetAuto(index);
+				});
+			});
+		</script>
+		<script>
+			document.addEventListener("DOMContentLoaded", function () {
+				const menuBtn = document.querySelector(".nav_list_activator");
+				const navList = document.querySelector(".nav_list");
+				const links = document.querySelectorAll(".nav_list a");
+
+				// Open / toggle menu
+				menuBtn.addEventListener("click", function () {
+					navList.classList.toggle("active");
+				});
+
+				// Close menu when any link is clicked
+				links.forEach(link => {
+					link.addEventListener("click", function () {
+						navList.classList.remove("active");
+					});
 				});
 			});
 		</script>
