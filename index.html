@@ -23,11 +23,28 @@
 	<!-- Front Page script & css-->
 		<link rel="stylesheet" href="css/server.css">
 		<link rel="stylesheet" href="css/ui-home.css">
-		<script src="js/common_home_background.js"></script>
 	</head>
 	<!-- Front Page Content -->
 	<body>
-		<header id="top">
+		<div id="top"></div>
+		<navigation id="header">
+			<div class="header">
+				<div class="hl">
+					<img alt="Yusatsu Nao's Logo" src="img/yusatsunao.png" alt="Yusatsu Nao's Official Logo"/>
+				</div>
+			</div>
+			<nav class="navigation">
+				<ul>
+					<li><a class="pc-menu scroll-link" href="#top">TOP</a></li>
+					<li><a class="pc-menu scroll-link" href="#main-content-video">YOUTUBE</a></li>
+					<li><a class="pc-menu scroll-link" href="#main-content-featured">FEATURED</a></li>
+					<li><a class="pc-menu scroll-link" href="#main-content-home">BLOG</a></li>
+					<li><a class="pc-menu scroll-link" href="#main-content-works">WORKS</a></li>
+					<li><a class="pc-menu scroll-link" href="#profile">ABOUT</a></li>
+				</ul>
+			</nav>
+		</navigation>
+		<header>
 			<!-- Menu System Mobile -->	
 			<!--
 			<div id="circularMenu" class="circular-menu">
@@ -44,22 +61,6 @@
 			</div>
 			-->
 			<!-- Menu System Desktop-->
-			<div id="header">
-				<div class="header">
-					<div class="hl">
-						<img alt="Yusatsu Nao's Logo" src="img/yusatsunao.png" alt="Yusatsu Nao's Official Logo"/>
-					</div>
-				</div>
-				<nav class="navigation">
-					<ul>
-						<li><a class="pc-menu scroll-link" href="#top">TOP</a></li>
-						<li><a class="pc-menu scroll-link" href="#main-content-video">YOUTUBE</a></li>
-						<li><a class="pc-menu scroll-link" href="#main-content-home">BLOG</a></li>
-						<li><a class="pc-menu scroll-link" href="#main-content-works">WORKS</a></li>
-						<li><a class="pc-menu scroll-link" href="#profile">ABOUT</a></li>
-					</ul>
-				</nav>
-			</div>
 			<div class="clock">
 				<div class="digital-clock">00 : 00 : 00</div>
 				<div class="day-cond">
@@ -79,7 +80,7 @@
 					<div class="video_profile">
 						<img class="youtube_image" src="img/thumb/profile.jpg" alt="Yusatsu Nao's Youtube Profile">
 						<a class="youtube_title" href="https://youtube.com/yusatsunao">Yusatsu Nao</a>
-						<span class="youtube_handle">@yusatsunao・2.6K subscribers・114 videos</span>
+						<span class="youtube_handle">@yusatsunao・2.7K subscribers・112 videos</span>
 						<span class="youtube_subs" onclick="openLink('https://www.youtube.com/@YusatsuNao?sub_confirmation=1')">Subscribe</span>
 					</div>
 					<div class="video_profile_a">
@@ -89,6 +90,14 @@
 				</div>
 				<div class="video new"></div>
 				<div class="video pop"></div>
+			</div>
+			<div id="main-content-featured">
+				<h1 class="works_title">Featured</h1>
+				<div class="works">					
+					<div onclick="openLink('works/maiyome.html')" class="works_item">
+						<img src="resources/image/maiyome_icon.png" alt="MaiYome Icon"></div>
+				</div>
+
 			</div>
 			<div id="main-content-home">
 				<h1 class="blog_title">Catch up with the latest blog post</h1>
@@ -131,21 +140,6 @@
 							I'm from ASIA more precisely, SEA, yeah a SEA, you know the blue big mass of water―――.<br/>
 							Аnyway, In this website I pretty much post stuff I made/edited for all these years, whether it's a Youtube Video/Rainmeter Skins/Icons/Design etc, because I love editing stuff like Image/Program/Scripts or whatever I can edit/make and then I post it here, and Videos/Skins/Icons above is just a few of stuff I edited.<br/><br/>
 							I created this site back in 2015 and now still being updated and you can see my latest works above or check <b>SHOW MORE/SEE MORE</b> button to see more stuff. Well, this site is pretty simple because it's just a github pages, probably I'm going to change it to an official site later on, but for now just like this, in github. but anyway, if you want to follow me you can check my three social media/sites below.
-							<br/><br/><br/>
-							Also here are the links for the image/artist used in this page,<br/>
-							Pixiv ID : ぺい/ティアす-07a > <a href="https://www.pixiv.net/member.php?id=1883190" rel="nofollow">https://www.pixiv.net/member.php?id=1883190</a>
-							<br/>
-							Pixiv ID : フェイトリネ - アルファ > <a href="https://www.pixiv.net/member.php?id=952566" rel="nofollow">https://www.pixiv.net/member.php?id=952566</a>
-							<br/>
-							Pixiv ID : mocha＠ティア【そ11a】 > <a href="https://www.pixiv.net/member.php?id=648285" rel="nofollow">https://www.pixiv.net/member.php?id=648285</a>
-							<br/>
-							Pixiv ID : Ryosuke > <a href="https://www.pixiv.net/member.php?id=1148741" rel="nofollow">https://www.pixiv.net/member.php?id=1148741</a>
-							<br/>
-							Pixiv ID : mks > <a href="https://www.pixiv.net/member.php?id=750220" rel="nofollow">https://www.pixiv.net/member.php?id=750220</a>
-							<br/>
-							Pixiv ID : ゲン助 > <a href="https://www.pixiv.net/member.php?id=32008" rel="nofollow">https://www.pixiv.net/member.php?id=32008</a>
-							<br/>
-							Pixiv ID : ツジキ > <a href="https://www.pixiv.net/member.php?id=15568" rel="nofollow">https://www.pixiv.net/member.php?id=15568</a>
 		  				</div>
 	  				</div>
 				</div>
