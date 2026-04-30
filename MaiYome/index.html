@@ -4,7 +4,7 @@
 	<!-- General meta tag-->
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<link rel="icon" type="image/png" href="../img/maiyome.ico">
+		<link rel="icon" type="image/png" href="../resources/icon/icn_maiyome.ico">
 		<link rel="canonical" href="http://yusatsunao.com/">
 	<!-- Front Page meta tag -->
 		<title>MaiYome - Local Based Booru Application</title>
@@ -22,8 +22,8 @@
 		<meta property="og:site_name" content="MaiYome - The Local Based Booru">
 		<meta property="og:locale" content="en_US">
 	<!-- Front Page script & css-->
-		<link rel="stylesheet" href="resources/css/server.css">
-		<link rel="stylesheet" href="resources/css/ui-maiyome.css">
+		<link rel="stylesheet" href="../resources/css/server.css">
+		<link rel="stylesheet" href="../resources/css/ui-maiyome.css">
 		<script>
 		</script>
 		<style>
@@ -213,7 +213,7 @@
 						<div class="nav item"><a href="#developers">Development</a></div>
 						<div class="nav item"><a href="#changelog">Changelog</a></div>
 						<div class="nav item"><a href="#top">Download</a></div>
-						<div class="nav item"><a href="index.html">Yusatsu Nao</a></div>
+						<div class="nav item"><a href="../index.html">Yusatsu Nao</a></div>
 					</div>
 				</div>
 				<div class="nav_download">
@@ -289,7 +289,7 @@
 				<div class="usage main">
 					<div class="usage list">
 						<div class="usage top one">
-							<img src="resources/image/maiyome_sub_img1.webp">
+							<img src="../resources/image/maiyome_sub_img1.webp">
 						</div>
 						<div class="usage now">
 							<span class="info top" ref="#">Importing Your Image/Folder</span>
@@ -304,7 +304,7 @@
 					</div>
 					<div class="usage list">
 						<div class="usage top two">
-							<img src="resources/image/maiyome_sub_img2.webp">
+							<img src="../resources/image/maiyome_sub_img2.webp">
 						</div>
 						<div class="usage now">
 							<span class="info top" ref="#">Tagging / Preset Tagging</span>
@@ -321,7 +321,7 @@
 					</div>
 					<div class="usage list">
 						<div class="usage top three">
-							<img src="resources/image/maiyome_sub_img3.webp">
+							<img src="../resources/image/maiyome_sub_img3.webp">
 						</div>
 						<div class="usage now">
 							<span class="info top" ref="#">Fingerprinting & Comparator</span>
@@ -379,9 +379,9 @@
 				<div class="credit">Copyright &#169; 2015 - <script>document.write(new Date().getFullYear());</script> Yusatsu Nao</div>
 			</div>	
 		<!-- Afterload script & css	-->
-		<script src="resources/js/jquery.min.js"></script>
-		<script src="resources/js/common_navigation_enable_scroll.js"></script>		
-		<script src="resources/js/common_link.js"></script>
+		<script src="../resources/js/jquery.min.js"></script>
+		<script src="../resources/js/common_navigation_enable_scroll.js"></script>		
+		<script src="../resources/js/common_link.js"></script>
 		<script>
 			const tabs = document.querySelectorAll('.data');
 			const imageBox = document.querySelector('.feature.image');
@@ -419,7 +419,7 @@
 			*/
 						
 			function getImagePath(index) {
-				return `resources/image/maiyome_ft${index + 1}.webp`;
+				return `../resources/image/maiyome_ft${index + 1}.webp`;
 			}
 
 			function setActive(index) {
