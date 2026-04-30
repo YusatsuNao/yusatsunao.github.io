@@ -2,5 +2,8 @@
 	"cleanUrls": true,
 	"rewrites": [
 		{ "source": "/about", "destination": "/about.html" }
+	],
+	"redirects": [
+		{ "source": "/maiyome", "destination": "/MaiYome", "permanent": true }
 	]
 }
